@@ -2,30 +2,20 @@ const Category = require('../models/Category');
 
 exports.createCategory = async (req, res) => {
   try {
-    const { name, image } = req.body;
-
-    const categoryExists = await Category.findOne({ name });
-    if (categoryExists) {
-      return res.status(400).json({ message: 'Category already exists' });
-    }
-
-    const category = new Category({ name, image });
+    const category = new Category(req.body);
     await category.save();
-
     res.status(201).json({ message: 'Category created successfully', category });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Failed to create category' });
   }
 };
 
-// Get all categories
-exports.getCategories = async (req, res) => {
+exports.getAllCategories = async (req, res) => {
   try {
-    const categories = await Category.find().sort({ createdAt: -1 });
+    const categories = await Category.find();
     res.status(200).json(categories);
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
     res.status(500).json({ message: 'Failed to fetch categories' });
   }
 };
