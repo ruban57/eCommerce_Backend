@@ -1,0 +1,54 @@
+[
+    {
+      "_id": "6638ab1d2ef0a23c0c3c879a",
+      "name": "iPhone 15 Pro Max",
+      "brand": "Apple",
+      "description": "Flagship Apple smartphone with titanium design",
+      "price": 5200,
+      "discount": 5,
+      "images": [
+        "https://m.media-amazon.com/images/I/71cinR9HQkL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "category": {
+        "_id": "6638ab0c2ef0a23c0c3c8799",
+        "name": "Smartphones"
+      },
+      "stock": 35,
+      "isFeatured": true
+    },
+    {
+      "_id": "6638ab3c2ef0a23c0c3c879b",
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "description": "Latest Samsung flagship with enhanced AI camera",
+      "price": 4800,
+      "discount": 10,
+      "images": [
+        "https://m.media-amazon.com/images/I/71HW5xwNxxL._AC_UF1000,1000_QL80_.jpg"
+      ],
+      "category": {
+        "_id": "6638ab0c2ef0a23c0c3c8799",
+        "name": "Smartphones"
+      },
+      "stock": 50,
+      "isFeatured": true
+    },
+    {
+      "_id": "6638ab552ef0a23c0c3c879c",
+      "name": "Sony WH-1000XM5 Headphones",
+      "brand": "Sony",
+      "description": "Industry-leading noise cancelling headphones",
+      "price": 1300,
+      "discount": 15,
+      "images": [
+        "https://m.media-amazon.com/images/I/514vwxueu7L.jpg"
+      ],
+      "category": {
+        "_id": "6638ab202ef0a23c0c3c879a",
+        "name": "Accessories"
+      },
+      "stock": 100,
+      "isFeatured": false
+    }
+  ]
+  
