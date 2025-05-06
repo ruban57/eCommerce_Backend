@@ -1,11 +1,22 @@
 const Order = require('../models/Order');
 
 exports.createOrder = async (req, res) => {
-  const { items, totalAmount } = req.body;
-  const order = await Order.create({
-    user: req.user.userId,
-    items,
-    totalAmount
-  });
-  res.json(order);
+  try {
+    const { user, products, totalAmount, paymentMethod, shippingAddress } = req.body;
+
+    const order = new Order({
+      user,
+      products,
+      totalAmount,
+      paymentMethod,
+      shippingAddress
+    });
+
+    await order.save();
+
+    res.status(201).json({ message: 'Order created successfully', order });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Failed to create order' });
+  }
 };
